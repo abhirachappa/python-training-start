@@ -19,20 +19,19 @@ print(f"Task 1 Results:\n"
       f"Status Type: {type(status)}, Status ID: {id(status)}")
 
 
+# Task - 2: Advanced I/O and Type Casting Pipeline
 
-#Task - 2: Advanced I/O and Type Casting Pipeline
 
+hourly_rate = float(input("Enter Hourly Rate: "))
+hours_worked = int(input("Enter Hours Worked: "))
+tax_bracket = float(input("Enter Tax Bracket (e.g., 0.2): "))
 
-hourly_rate = float(input("Enter Hourly Rate: ")) 
-hours_worked = int(input("Enter Hours Worked: ")) 
-tax_bracket = float(input("Enter Tax Bracket (e.g., 0.2): ")) 
-
-gross_pay = hourly_rate * hours_worked 
-net_pay = gross_pay - (gross_pay * tax_bracket) 
+gross_pay = hourly_rate * hours_worked
+net_pay = gross_pay - (gross_pay * tax_bracket)
 
 print(f"\nValidation: hourly_rate is {type(hourly_rate)}, "
       f"hours_worked is {type(hours_worked)}, "
-      f"tax_bracket is {type(tax_bracket)}") 
+      f"tax_bracket is {type(tax_bracket)}")
 
 # Task - 3: Precision Engineering with F-Strings
 header = "OFFICIAL PAYSLIP"
@@ -49,7 +48,7 @@ print(divider)
 
 # Task - 4: Complex Expressions & Operator Precedence
 a, b, c, d, e, f, g = 10.0, 5, 2, 3, 2, 8, 3
-# Formula: (a + b * c) / (d^e) - f // g
+
 result = (a + b * c) / (d ** e) - (f // g)
 is_valid = result > 0 and result is not None
 
@@ -57,14 +56,13 @@ print(f"\nTask 4 - Result: {result}")
 print(f"Is Valid: {is_valid}")
 
 # Task - 5: Bitwise Permissions & Flag Manipulation
-GUEST, USER, ADMIN, SUPERUSER = 1, 2, 4, 8 
-current_access = GUEST | USER           # Combine GUEST and USER
-new_secure_level = ADMIN << 1           # Left shift ADMIN
-has_user_bit = bool(current_access & USER) # Check for USER bit
-current_access = current_access ^ GUEST # Toggle GUEST off
+GUEST, USER, ADMIN, SUPERUSER = 1, 2, 4, 8
+current_access = GUEST | USER
+new_secure_level = ADMIN << 1
+has_user_bit = bool(current_access & USER)
+current_access = current_access ^ GUEST
 
 print(f"\nTask 5 Bitwise Results:")
 print(f"Current Access (Binary): {bin(current_access)}")
 print(f"New Secure Level: {new_secure_level}")
 print(f"Has User Bit: {has_user_bit}")
-
